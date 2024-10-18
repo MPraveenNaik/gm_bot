@@ -1,0 +1,36 @@
+# Automated Reply Bot
+1.
+This project is an automated bot that replies to messages with specific keywords ("good morning", "gm", "g m") using a random greeting and an image file. It fetches user profile and message feed data, and requires authentication using a bearer token.
+
+## Prerequisites
+
+- Python 3.x
+- PythonAnywhere account (or any other hosting environment)
+- Required Python packages (`requests`, `python-dotenv`, `logging`)
+2.Installing dependencies:
+
+Use the following command to install the required Python packages:
+
+bash
+
+pip install -r requirements.txt
+3.Ensure the Bearer Token is up-to-date:
+
+The bot uses the bearer token from the .env file. Make sure the BEARER_TOKEN is valid and not expired.
+If the bearer token is not available or has expired, the script will attempt to fetch a new token using the provided AUTH_URL, USERNAME, PASSWORD, and CLIENT_ID.
+Update the .env file with the new token whenever it changes.
+4.Images Required for Responses:
+
+The bot randomly selects one of the images to send as a response. The available image files should be placed in the project directory.
+
+Supported image formats: .jpeg, .jpg, .gif
+The following files are included by default:
+gm1.jpeg
+
+200w.gif
+
+Note: You can add more image files to the list. Make sure they are in the same directory as the script or provide the relative path.
+5.run script 
+ python gmbot.py
+
+
